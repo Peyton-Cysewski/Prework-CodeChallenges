@@ -7,24 +7,37 @@ namespace Code_Challenges
     {
         static void Main(string[] args)
         {
-            //problem_1();
-            //Console.Readline();
-            //Console.Clear();
-            //problem_2();
-            //Console.Clear();
-            //Console.Readline();
+            Console.WriteLine("Problem 1:");
+            Console.ReadLine();
 
-            //int[] test1 = new int[] { 1, 2, 3 };
-            //int[] test2 = new int[] { 10, 2, 7 };
-            //int[] test3 = new int[] { 2, 2 };
-            //int[] test4 = new int[] { -1, 1, 0 };
-            //problem_3(test1);
-            //problem_3(test2);
-            //problem_3(test3);
-            //problem_3(test4);
+            problem_1();
+            Console.ReadLine();
+            Console.Clear();
 
-            //Console.Readline();
-            //Console.Clear();
+            Console.WriteLine("Problem 2:");
+            Console.ReadLine();
+            
+            problem_2();
+            Console.ReadLine();
+            Console.Clear();
+
+            Console.WriteLine("Problem 3:");
+            Console.ReadLine();
+
+            int[] test1 = new int[] { 1, 2, 3 };
+            int[] test2 = new int[] { 10, 2, 7 };
+            int[] test3 = new int[] { 2, 2 };
+            int[] test4 = new int[] { -1, 1, 0 };
+            problem_3(test1);
+            problem_3(test2);
+            problem_3(test3);
+            problem_3(test4);
+            Console.ReadLine();
+            Console.Clear();
+
+            Console.WriteLine("Problem 4:");
+            Console.ReadLine();
+
             int[,] matrix1 = new int[,] { { 1, 2, 3, 1 }, { 4, 5, 6, 1 }, { 7, 8, 9, 10 } };
             int[,] matrix2 = new int[,] { { 1, 2 }, { 4, 5 }, { 7, 8 }, { 9, 10 }, { 11, 12} };
             int[,] matrix3 = new int[,] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 }, { 10, 11, 12} };
@@ -72,10 +85,15 @@ namespace Code_Challenges
             else if (year % 100 == 0)
             {
                 Console.WriteLine($"The year {year} is not a leap year.");
+
             }
             else if (year % 4 == 0)
             {
                 Console.WriteLine($"The year {year} is a leap year.");
+            }
+            else
+            {
+                Console.WriteLine($"The year {year} is not a leap year.");
             }
         }
 
