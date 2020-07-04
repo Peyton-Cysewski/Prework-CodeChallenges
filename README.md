@@ -22,3 +22,11 @@ The goal of this problem is given an array of integers, see if the numbers' sum 
 
 #### Screenshot:
 ![Outputs](Assets/problem3.png)
+
+### Problem 4: Sum of Rows
+
+The goal is that given a matrix of integers (two dimesional matrix), the function will return an array of each of the sums of the individual rows.
+
+#### Screenshot:
+![Inputs](Assets/problem4-a.png)
+![Outcome](Assets/problem4-b.png)
