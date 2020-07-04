@@ -7,3 +7,10 @@ The goal of this problem is to take 5 input numbers between 1 and 10. Then the u
 #### Example:
 ![Inputs](Assets/problem1-a.png)
 ![Final Score](Assets/problem1-b.png)
+
+### Problem 2: Leap Year Calculator
+
+The goal of this problem is to have the user input a year and the program will determine whether or not that year is a leap year.
+
+![Year](Assets/problem2-a.png)
+![Output](Assets/problem2-b.png)

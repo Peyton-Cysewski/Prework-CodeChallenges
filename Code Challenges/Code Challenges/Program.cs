@@ -6,7 +6,7 @@ namespace Code_Challenges
     {
         static void Main(string[] args)
         {
-            problem_1();
+            problem_2();
         }
 
         private static void problem_1()
@@ -31,6 +31,27 @@ namespace Code_Challenges
 
             Console.Clear();
             Console.WriteLine($"The final score is {score}");
+        }
+
+        private static void problem_2()
+        {
+            Console.Clear();
+            Console.WriteLine("Enter a year to see if it is a leap year: ");
+
+            int year = Convert.ToInt32(Console.ReadLine());
+            
+            Console.Clear();
+
+            if (year % 400 == 0)
+            {
+                Console.WriteLine($"The year {year} is a leap year.");
+            } else if (year % 100 == 0)
+            {
+                Console.WriteLine($"The year {year} is not a leap year.");
+            } else if (year % 4 == 0)
+            {
+                Console.WriteLine($"The year {year} is a leap year.");
+            }
         }
     }
 }
