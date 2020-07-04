@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 
 namespace Code_Challenges
 {
@@ -6,12 +7,22 @@ namespace Code_Challenges
     {
         static void Main(string[] args)
         {
-            //problem_1();
-            //Console.Readline();
-            //Console.Clear();
-            //problem_2();
-            //Console.Clear();
-            //Console.Readline();
+            Console.WriteLine("Problem 1:");
+            Console.ReadLine();
+
+            problem_1();
+            Console.ReadLine();
+            Console.Clear();
+
+            Console.WriteLine("Problem 2:");
+            Console.ReadLine();
+            
+            problem_2();
+            Console.ReadLine();
+            Console.Clear();
+
+            Console.WriteLine("Problem 3:");
+            Console.ReadLine();
 
             int[] test1 = new int[] { 1, 2, 3 };
             int[] test2 = new int[] { 10, 2, 7 };
@@ -21,10 +32,20 @@ namespace Code_Challenges
             problem_3(test2);
             problem_3(test3);
             problem_3(test4);
+            Console.ReadLine();
+            Console.Clear();
 
-            //Console.Readline();
-            //Console.Clear();
-            //problem_4();
+            Console.WriteLine("Problem 4:");
+            Console.ReadLine();
+
+            int[,] matrix1 = new int[,] { { 1, 2, 3, 1 }, { 4, 5, 6, 1 }, { 7, 8, 9, 10 } };
+            int[,] matrix2 = new int[,] { { 1, 2 }, { 4, 5 }, { 7, 8 }, { 9, 10 }, { 11, 12} };
+            int[,] matrix3 = new int[,] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 }, { 10, 11, 12} };
+            int[,] matrix4 = new int[,] { { 1 }, { 2 }, { 3 }, { 4 } };
+            problem_4(matrix1);
+            problem_4(matrix2);
+            problem_4(matrix3);
+            problem_4(matrix4);
         }
 
         private static void problem_1()
@@ -64,13 +85,19 @@ namespace Code_Challenges
             else if (year % 100 == 0)
             {
                 Console.WriteLine($"The year {year} is not a leap year.");
+
             }
             else if (year % 4 == 0)
             {
                 Console.WriteLine($"The year {year} is a leap year.");
             }
+            else
+            {
+                Console.WriteLine($"The year {year} is not a leap year.");
+            }
         }
-        private static void problem_3(int[] testArray)
+
+        private static string problem_3(int[] testArray)
         {
             int product = 1;
             int sum = 0;
@@ -88,7 +115,28 @@ namespace Code_Challenges
                 sum += num;
             }
             Console.Write("] ");
-            Console.Write(sum == product && positive == true ? "contains a perfect sequence!" : "does not contain a perfect sequence.\n");
+            //Console.Write(sum == product && positive == true ? "contains a perfect sequence!" : "does not contain a perfect sequence.\n");
+            string result = sum == product && positive == true ? "contains a perfect sequence!" : "does not contain a perfect sequence.\n";
+            Console.Write(result);
+            return sum == product && positive == true ? "Yes" : "No"; // added to fulfill the requirements, but is not shown in the console; only the 'result' message is shown.
+        }
+
+        private static int[] problem_4(int[,] matrix)
+        {
+            int[] out_array = new int[matrix.GetLength(0)];
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    out_array[i] += matrix[i, j];
+                }
+            }
+            foreach(int num in out_array)
+            {
+                Console.Write($"{num} ");
+            }
+            Console.Write("\n");
+            return out_array;
         }
     }
 }
